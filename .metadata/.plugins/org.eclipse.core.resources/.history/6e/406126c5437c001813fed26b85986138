@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+#include <vector>
+using namespace std;
+
+
+void MoveStrings(vector<string>& source,vector<string>& destination){
+	for (auto element:source){
+		destination.push_back(element);
+	}
+	source.clear();
+}
+
+void print_list_content(const vector<string>& vector_to_print){
+	cout << "Contains: ";
+	for (auto element:vector_to_print){
+		cout << vector_to_print;
+	}
+}
+
+
+int main(){
+	vector<string> source = {"one", "two", "three"};
+	vector<string> destination = {"four", "five"};
+	MoveStrings(source, destination);
+}

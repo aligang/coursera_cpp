@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build data_types",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "data_types.cpp",
+                "-o data_types.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false 
+            },
+            "problemMatcher": []
+        }
+    ]
+}

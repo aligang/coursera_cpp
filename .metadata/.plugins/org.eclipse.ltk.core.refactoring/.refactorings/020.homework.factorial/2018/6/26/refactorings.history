@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;020.homework.factorial/factorial.cpp&apos; to &apos;main.cpp&apos;" description="Rename resource &apos;factorial.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="factorial.cpp" name="main.cpp" stamp="1530220182353" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;020.homework.factorial/factorial.cpp&apos; to &apos;functions.cpp&apos;" description="Rename resource &apos;factorial.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="factorial.cpp" name="functions.cpp" stamp="1530226881595" updateReferences="true"/>
+</session>

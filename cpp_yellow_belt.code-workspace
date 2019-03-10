@@ -1,0 +1,177 @@
+{
+	"folders": [
+		{
+			"path": "101.matrix"
+		},
+		{
+			"path": "102.int_types"
+		},
+		{
+			"path": "103.average_temperature"
+		},
+		{
+			"path": "104.blocks_weight"
+		},
+		{
+			"path": "105.turples"
+		},
+		{
+			"path": "106.turples_and_pairs"
+		},
+		{
+			"path": "113.square_all"
+		},
+		{
+			"path": "114.reference_to_element"
+		},
+		{
+			"path": "115.simple_unit_tests"
+		},
+		{
+			"path": "116.bus_stops"
+		},
+		{
+			"path": "117.unit_tests_framework"
+		},
+		{
+			"path": "118.GetDistinctRealRootCount"
+		},
+		{
+			"path": "119.person"
+		},
+		{
+			"path": "120.Rational"
+		},
+		{
+			"path": "121.IsPalindrom"
+		},
+		{
+			"path": "121.function_in_header_file"
+		},
+		{
+			"path": "122.class_in_header_file"
+		},
+		{
+			"path": "123.class_declaration"
+		},
+		{
+			"path": "124.programm_decomposition"
+		},
+		{
+			"path": "125.introducing_iterators"
+		},
+		{
+			"path": "126.part_of_vector"
+		},
+		{
+			"path": "127.custom_iterator_test"
+		},
+		{
+			"path": "128.part_of_set"
+		},
+		{
+			"path": "129.words_in_string"
+		},
+		{
+			"path": "130.iterators_withing_methods"
+		},
+		{
+			"path": "131.iterators_within_algorithms"
+		},
+		{
+			"path": "132.reverse_iterators"
+		},
+		{
+			"path": "133.algorithms_returning_containers"
+		},
+		{
+			"path": "134.inserter_and_backinserter"
+		},
+		{
+			"path": "135.delete_dublicates"
+		},
+		{
+			"path": "136.all_shifts"
+		},
+		{
+			"path": "137.demographic_representations"
+		},
+		{
+			"path": "138.sorting_by_allignment"
+		},
+		{
+			"path": "139.search_nearest_element"
+		},
+		{
+			"path": "140.names_and_surnames_4"
+		},
+		{
+			"path": "141.group_strings_using_prefixes"
+		},
+		{
+			"path": "143.introducing_inheritance"
+		},
+		{
+			"path": "144.initizlization_lists"
+		},
+		{
+			"path": "145.construction_order"
+		},
+		{
+			"path": "146.inheritance_excersize"
+		},
+		{
+			"path": "148.parser"
+		},
+		{
+			"path": "149.notifiers"
+		},
+		{
+			"path": "150.figures"
+		},
+		{
+			"path": "151.peer_grading"
+		},
+		{
+			"path": "152.database"
+		},
+	],
+    "settings": {
+        "files.associations": {
+            "array": "cpp",
+            "*.tcc": "cpp",
+            "cctype": "cpp",
+            "clocale": "cpp",
+            "cmath": "cpp",
+            "cstdint": "cpp",
+            "cstdio": "cpp",
+            "cstdlib": "cpp",
+            "cwchar": "cpp",
+            "cwctype": "cpp",
+            "unordered_map": "cpp",
+            "vector": "cpp",
+            "exception": "cpp",
+            "fstream": "cpp",
+            "initializer_list": "cpp",
+            "iosfwd": "cpp",
+            "iostream": "cpp",
+            "istream": "cpp",
+            "limits": "cpp",
+            "memory": "cpp",
+            "new": "cpp",
+            "optional": "cpp",
+            "ostream": "cpp",
+            "sstream": "cpp",
+            "stdexcept": "cpp",
+            "streambuf": "cpp",
+            "string_view": "cpp",
+            "system_error": "cpp",
+            "type_traits": "cpp",
+            "tuple": "cpp",
+            "typeinfo": "cpp",
+            "utility": "cpp",
+            "deque": "cpp",
+            "functional": "cpp"
+        }
+    }
+}

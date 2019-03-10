@@ -1,0 +1,6 @@
+02:42:09 **** Incremental Build of configuration Debug for project 000.eclipse_test ****
+make all 
+make: Nothing to be done for 'all'.
+
+02:42:09 Build Finished (took 319ms)
+

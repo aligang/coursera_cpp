@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+#include <algorithm>
+
+
+using namespace std;
+
+
+void collect_cli_input(map<string,vector<string>> cli_input;){}
+
+
+int main(){
+map<string,vector<string>> cli_input;
+map<string,vector<string>> bus_routes;
+
+	return 0;
+}

@@ -1,0 +1,15 @@
+23:51:35 **** Incremental Build of configuration Debug for project 037.sets ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: 037.sets
+Invoking: GCC C++ Linker
+g++  -o "037.sets"  ./main.o   
+Finished building target: 037.sets
+ 
+
+23:51:36 Build Finished (took 863ms)
+

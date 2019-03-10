@@ -1,0 +1,1 @@
+ReversibleString.o: ../ReversibleString.cpp

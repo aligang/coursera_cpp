@@ -1,0 +1,81 @@
+#include <vector>
+#include <string>
+#include <map>
+#include <iostream>
+#include <utility>
+
+
+using namespace std;
+
+
+// Предварительное объявление шаблонных функций
+template<typename T> T FuncA(T x);
+template<typename T> void FuncB(T x);
+
+// Объявляем шаблонные функции
+
+
+template <typename T>
+T operator * (T& x, T& y) {
+	return x*y;
+}
+
+
+template <typename T>
+void execute(T& x) {
+	x = x*x;
+}
+
+
+template <typename T>
+T Sqr(T x) {
+	execute(x);
+	return x;
+}
+
+
+
+template <typename T>
+vector<T> Sqr(vector<T> x) {
+	for (auto& element:x){
+		Sqr(element);
+	}
+	return x;
+}
+
+
+template <typename First, typename Second>
+map<First, Second> Sqr(map<First, Second> x) {
+	for (auto& element:x){
+		Sqr(element.second);
+	}
+	return x;
+}
+
+
+template <typename First, typename Second>
+pair<First, Second> Sqr(pair<First, Second> x) {
+	Sqr(x.first);
+	Sqr(x.second);
+	return x;
+}
+
+
+int main(){
+	// Пример вызова функции
+	vector<int> v = {1, 2, 3};
+	cout << "vector:";
+	for (int x : Sqr(v)) {
+	  cout << ' ' << x;
+	}
+	cout << endl;
+
+	map<int, pair<int, int>> map_of_pairs = {
+	  {4, {2, 2}},
+	  {7, {4, 3}}
+	};
+	cout << "map of pairs:" << endl;
+	for (const auto& x : Sqr(map_of_pairs)) {
+	  cout << x.first << ' ' << x.second.first << ' ' << x.second.second << endl;
+	}
+}

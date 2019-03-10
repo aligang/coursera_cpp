@@ -1,0 +1,6 @@
+02:42:10 **** Incremental Build of configuration Debug for project 010.homework.minimal_string ****
+make all 
+make: Nothing to be done for 'all'.
+
+02:42:11 Build Finished (took 323ms)
+

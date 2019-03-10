@@ -1,0 +1,52 @@
+17:50:57 **** Incremental Build of configuration Debug for project 109.database_of_regions ****
+make all 
+Building file: ../count_regions.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"count_regions.d" -MT"count_regions.o" -o "count_regions.o" "../count_regions.cpp"
+../count_regions.cpp:1:22: error: ‘Region’ does not name a type; did you mean ‘union’?
+ bool operator<(const Region& lhs, const Region& rhs) {
+                      ^~~~~~
+                      union
+../count_regions.cpp:1:41: error: ‘Region’ does not name a type; did you mean ‘union’?
+ bool operator<(const Region& lhs, const Region& rhs) {
+                                         ^~~~~~
+                                         union
+../count_regions.cpp:1:52: error: ‘bool operator<(const int&, const int&)’ must have an argument of class or enumerated type
+ bool operator<(const Region& lhs, const Region& rhs) {
+                                                    ^
+../count_regions.cpp:7:34: error: ‘vector’ does not name a type
+ int FindMaxRepetitionCount(const vector<Region>& regions){
+                                  ^~~~~~
+../count_regions.cpp:7:40: error: expected ‘,’ or ‘...’ before ‘<’ token
+ int FindMaxRepetitionCount(const vector<Region>& regions){
+                                        ^
+../count_regions.cpp: In function ‘int FindMaxRepetitionCount(int)’:
+../count_regions.cpp:9:4: error: ‘map’ was not declared in this scope
+    map<Region, int> repetion_count;
+    ^~~
+../count_regions.cpp:9:8: error: ‘Region’ was not declared in this scope
+    map<Region, int> repetion_count;
+        ^~~~~~
+../count_regions.cpp:9:8: note: suggested alternative: ‘union’
+    map<Region, int> repetion_count;
+        ^~~~~~
+        union
+../count_regions.cpp:9:16: error: expected primary-expression before ‘int’
+    map<Region, int> repetion_count;
+                ^~~
+../count_regions.cpp:10:15: error: ‘Region’ does not name a type; did you mean ‘union’?
+    for (const Region& region : regions) {
+               ^~~~~~
+               union
+../count_regions.cpp:13:4: error: expected ‘;’ before ‘return’
+    return result;
+    ^~~~~~
+../count_regions.cpp:13:4: error: expected primary-expression before ‘return’
+../count_regions.cpp:13:4: error: expected ‘;’ before ‘return’
+../count_regions.cpp:13:4: error: expected primary-expression before ‘return’
+../count_regions.cpp:13:4: error: expected ‘)’ before ‘return’
+make: *** [count_regions.o] Error 1
+subdir.mk:21: recipe for target 'count_regions.o' failed
+
+17:50:58 Build Finished (took 339ms)
+

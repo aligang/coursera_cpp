@@ -1,0 +1,1 @@
+person.o: ../person.cpp

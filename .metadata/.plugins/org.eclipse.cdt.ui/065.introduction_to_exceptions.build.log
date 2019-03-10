@@ -1,0 +1,6 @@
+20:00:56 **** Incremental Build of configuration Release for project 065.introduction_to_exceptions ****
+make all 
+make: Nothing to be done for 'all'.
+
+20:00:57 Build Finished (took 420ms)
+

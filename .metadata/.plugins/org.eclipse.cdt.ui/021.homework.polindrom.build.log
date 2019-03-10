@@ -1,0 +1,16 @@
+10:11:25 **** Incremental Build of configuration Debug for project 021.homework.polindrom ****
+make all 
+Building file: ../ispalindrom.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"ispalindrom.d" -MT"ispalindrom.o" -o "ispalindrom.o" "../ispalindrom.cpp"
+../ispalindrom.cpp:1:18: error: ‘string’ was not declared in this scope
+ bool IsPalindrom(string input_string){
+                  ^
+subdir.mk:21: recipe for target 'ispalindrom.o' failed
+../ispalindrom.cpp:1:38: error: expected ‘,’ or ‘;’ before ‘{’ token
+ bool IsPalindrom(string input_string){
+                                      ^
+make: *** [ispalindrom.o] Error 1
+
+10:11:26 Build Finished (took 331ms)
+

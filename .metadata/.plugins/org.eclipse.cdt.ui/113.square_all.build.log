@@ -1,0 +1,6 @@
+11:05:39 **** Incremental Build of configuration Debug for project 113.square_all ****
+make all 
+make: Nothing to be done for 'all'.
+
+11:05:39 Build Finished (took 262ms)
+

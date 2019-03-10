@@ -1,0 +1,6 @@
+02:42:11 **** Incremental Build of configuration Debug for project 012.do_while ****
+make all 
+make: Nothing to be done for 'all'.
+
+02:42:12 Build Finished (took 326ms)
+

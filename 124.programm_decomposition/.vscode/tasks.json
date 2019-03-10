@@ -1,0 +1,81 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "124.decomposition.requests",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+//                "-o executable",
+//                "main.cpp",
+//                "bus_manager.cpp",
+                "-c query.cpp",
+//                "responce.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "124.decomposition.responses",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+//                "-o executable",
+//                "main.cpp",
+//                "bus_manager.cpp",
+                "-c responses.cpp",
+//                "responce.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "124.decomposition.bus_manager",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+//                "-o executable",
+//                "main.cpp",
+//                "bus_manager.cpp",
+                "-c bus_manager.cpp",
+//                "responce.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "124.decomposition.common",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "-oexecutable",
+                "main.cpp",
+                "query.cpp",
+                "responses.cpp",
+                "bus_manager.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

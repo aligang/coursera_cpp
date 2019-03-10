@@ -1,0 +1,6 @@
+23:45:28 **** Incremental Build of configuration Debug for project 047.sorted_strings ****
+make all 
+make: Nothing to be done for 'all'.
+
+23:45:28 Build Finished (took 426ms)
+

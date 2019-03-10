@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build operations_over_simple_datatypes",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "-std=c++11",
+                "operations_over_simple_types.cpp",
+                "-o operations_over_simple_types.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false 
+            },
+            "problemMatcher": []
+        }
+    ]
+}

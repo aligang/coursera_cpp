@@ -1,0 +1,146 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <string>
+#include <set>
+#include <map>
+#include <sstream>
+
+using namespace std;
+
+// Реализуйте функции и методы классов и при необходимости добавьте свои
+
+
+class Date{
+public:
+	Date() = default;
+	Date(const int& input_year, const int& input_month, const int& input_day){
+		set_year(input_year);
+		set_month(input_month);
+		set_day(input_month);
+	}
+	int GetYear() const{
+		return year;
+	}
+	int GetMonth() const{
+		return month;
+	}
+	int GetDay() const{
+		return day;
+	}
+
+
+private:
+	void set_year(const int& input_year){
+		year = input_year;
+	}
+	void set_month(const int& input_month){
+		month = input_month;
+	}
+	void set_day(const int& input_day){
+		year = input_day;
+	}
+	int year;
+	int month;
+	int day;
+};
+
+
+bool operator<(const Date& lhs, const Date& rhs){
+	if (lhs.GetYear() < rhs.GetYear()){
+		return true;
+	} else if (lhs.GetYear() == rhs.GetYear()){
+		if (lhs.GetMonth() < rhs.GetMonth()){
+			return true;
+		} else if (lhs.GetMonth() == rhs.GetMonth()){
+			if (lhs.GetYear() < rhs.GetYear()){
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+
+istream& operator>>(istream& input_stream, Date& date){
+	int year;
+	int month;
+	int day;
+	if (!input_stream.eof()){
+		input_stream >> year;
+		input_stream.ignore(1);
+		input_stream >> month;
+		input_stream.ignore(1);
+		input_stream >> day;
+		date = Date(year, month, day);
+	} else {
+		input_stream.setstate(std::ios::failbit);
+	}
+	return input_stream;
+}
+
+
+class Database {
+public:
+	void AddEvent(const Date& date, const string& event){
+		date_to_event_mapping[date].insert(event);
+	}
+	bool DeleteEvent(const Date& date, const string& event){
+		if (date_to_event_mapping[date].count(event) == 1){
+			date_to_event_mapping[date].erase(event);
+			cout << "Deleted successfully";
+		} else {
+			cout << "Event not found";
+		}
+
+		return false;
+	}
+	int  DeleteDate(const Date& date){
+		int amount_of_events = date_to_event_mapping[date].size();
+		date_to_event_mapping.erase(date);
+		cout << "Deleted " << amount_of_events << " events";
+		return 0;
+	}
+	void Find(const Date& date) const{
+		for(auto& event:date_to_event_mapping[date]){
+			cout << event << endl;
+		}
+	}
+	void Print() const{
+
+	}
+private:
+  map<Date,set<string>> date_to_event_mapping;
+};
+
+int main() {
+	Database db;
+	Date date;
+	string operation;
+	string command;
+	string event;
+	while (getline(cin, command)) {
+		stringstream input_string_stream(command);
+		input_string_stream  >> operation;
+		if (operation != "Print"){
+			input_string_stream >> date;
+			if (operation == "Add"){
+				input_string_stream	>> event;
+				db.AddEvent(date,event);
+			} else if (operation == "Del" and input_string_stream.eof()) {
+				db.DeleteDate(date);
+			} else if (operation == "Del" and !input_string_stream.eof()) {
+				input_string_stream	>> event;
+				db.DeleteEvent(date,event);
+			} else if (operation == "Find") {
+				input_string_stream	>> event;
+				db.Find(date);
+			}
+		} else {
+
+		}
+    // Считайте команды с потока ввода и обработайте каждую
+  }
+
+  return 0;
+}

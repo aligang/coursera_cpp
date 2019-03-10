@@ -1,0 +1,1 @@
+discount.o: ../discount.cpp

@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "151.peer_grading",
+            "type": "shell",
+            "command": "/var/lib/lxd/containers/CPP/rootfs/usr/bin/x86_64-linux-gnu-g++-7",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "peer.cpp",
+                "-ooutput.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

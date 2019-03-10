@@ -1,0 +1,87 @@
+20:07:51 **** Incremental Build of configuration Debug for project 051.names_and_surnames.3 ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp:69:12: error: ‘name_info_element’ was not declared in this scope
+   map<int, name_info_element> name_history = {};
+            ^
+../main.cpp:69:29: error: template argument 2 is invalid
+   map<int, name_info_element> name_history = {};
+                             ^
+../main.cpp:69:29: error: template argument 4 is invalid
+../main.cpp: In constructor ‘Person::Person(const string&, const string&, const int&)’:
+../main.cpp:15:21: error: invalid types ‘int[const int]’ for array subscript
+    name_history[year].was_first_name_modified = true;
+                     ^
+../main.cpp:16:21: error: invalid types ‘int[const int]’ for array subscript
+    name_history[year].first_name = first_name_at_birth;
+                     ^
+../main.cpp:17:21: error: invalid types ‘int[const int]’ for array subscript
+    name_history[year].was_second_name_modified = true;
+                     ^
+../main.cpp:18:21: error: invalid types ‘int[const int]’ for array subscript
+    name_history[year].second_name = second_name_at_birth;
+                     ^
+../main.cpp: In member function ‘void Person::ChangeFirstName(int, const string&)’:
+../main.cpp:25:26: error: invalid types ‘int[const int]’ for array subscript
+     if (name_history[year].was_first_name_modified == false){
+                          ^
+../main.cpp:26:23: error: invalid types ‘int[const int]’ for array subscript
+      name_history[year].first_name = first_name;
+                       ^
+../main.cpp:27:23: error: invalid types ‘int[const int]’ for array subscript
+      name_history[year].was_first_name_modified = true;
+                       ^
+../main.cpp: In member function ‘void Person::ChangeLastName(int, const string&)’:
+../main.cpp:35:26: error: invalid types ‘int[const int]’ for array subscript
+     if (name_history[year].was_second_name_modified == false){
+                          ^
+../main.cpp:36:23: error: invalid types ‘int[const int]’ for array subscript
+      name_history[year].second_name = second_name;
+                       ^
+../main.cpp:37:23: error: invalid types ‘int[const int]’ for array subscript
+      name_history[year].was_second_name_modified = true;
+                       ^
+../main.cpp: In member function ‘Person::name_info_element Person::calculate_actual_name(const int&) const’:
+../main.cpp:82:21: error: request for member ‘size’ in ‘((const Person*)this)->Person::name_history’, which is of non-class type ‘const int’
+    if (name_history.size() != 0){
+                     ^
+../main.cpp:83:34: error: ‘begin’ was not declared in this scope
+     for (auto& particular_record:name_history){
+                                  ^
+../main.cpp:83:34: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:51:0,
+                 from ../main.cpp:1:
+/usr/include/c++/5/bits/range_access.h:87:5: note:   ‘std::begin’
+     begin(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/5/bits/range_access.h:87:5: note:   ‘std::begin’
+../main.cpp:83:34: error: ‘end’ was not declared in this scope
+     for (auto& particular_record:name_history){
+                                  ^
+../main.cpp:83:34: note: suggested alternatives:
+In file included from /usr/include/c++/5/string:51:0,
+                 from ../main.cpp:1:
+/usr/include/c++/5/bits/range_access.h:97:5: note:   ‘std::end’
+     end(_Tp (&__arr)[_Nm])
+     ^
+/usr/include/c++/5/bits/range_access.h:97:5: note:   ‘std::end’
+../main.cpp: In member function ‘std::__cxx11::string Person::convert_to_string(std::vector<std::__cxx11::basic_string<char> >&) const’:
+../main.cpp:130:24: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    for (auto i = 0 ; i < unique_names.size(); i++){
+                        ^
+../main.cpp:132:50: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (i >= 1 && (unique_names.size() > 2) && i != (unique_names.size() - 1)){
+                                                  ^
+../main.cpp:135:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (i != (unique_names.size() - 1)){
+           ^
+../main.cpp:141:11: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     if (i == (unique_names.size() - 1) && (unique_names.size() > 1)){
+           ^
+subdir.mk:21: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+
+20:07:52 Build Finished (took 962ms)
+

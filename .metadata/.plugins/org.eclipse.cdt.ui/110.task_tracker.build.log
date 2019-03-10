@@ -1,0 +1,46 @@
+18:22:02 **** Incremental Build of configuration Debug for project 110.task_tracker ****
+make all 
+Building file: ../TeamTasks.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++1z -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"TeamTasks.d" -MT"TeamTasks.o" -o "TeamTasks.o" "../TeamTasks.cpp"
+../TeamTasks.cpp:4:8: error: ‘TasksInfo’ does not name a type
+  const TasksInfo& GetPersonTasksInfo(const string& person) const{
+        ^~~~~~~~~
+../TeamTasks.cpp:9:26: error: ‘string’ does not name a type; did you mean ‘struct’?
+    void AddNewTask(const string& person){
+                          ^~~~~~
+                          struct
+../TeamTasks.cpp:15:4: error: ‘tuple’ does not name a type; did you mean ‘double’?
+    tuple<TasksInfo, TasksInfo> PerformPersonTasks(const string& person, int task_count){
+    ^~~~~
+    double
+../TeamTasks.cpp:48:4: error: ‘map’ does not name a type
+    map<string, TasksInfo> task_by_person;
+    ^~~
+../TeamTasks.cpp:49:31: error: ‘TasksInfo’ has not been declared
+    void remove_empty_elements(TasksInfo& task_info){
+                               ^~~~~~~~~
+../TeamTasks.cpp: In member function ‘void TeamTasks::AddNewTask(const int&)’:
+../TeamTasks.cpp:10:5: error: ‘task_by_person’ was not declared in this scope
+     task_by_person[person][TaskStatus::NEW]++;
+     ^~~~~~~~~~~~~~
+../TeamTasks.cpp:10:28: error: ‘TaskStatus’ has not been declared
+     task_by_person[person][TaskStatus::NEW]++;
+                            ^~~~~~~~~~
+../TeamTasks.cpp: In member function ‘void TeamTasks::remove_empty_elements(int&)’:
+../TeamTasks.cpp:51:29: error: ‘begin’ was not declared in this scope
+     for (auto& [key, value]:iterating_map){
+                             ^~~~~~~~~~~~~
+../TeamTasks.cpp:51:29: error: ‘end’ was not declared in this scope
+../TeamTasks.cpp:51:29: note: suggested alternative: ‘enum’
+     for (auto& [key, value]:iterating_map){
+                             ^~~~~~~~~~~~~
+                             enum
+../TeamTasks.cpp:53:17: error: request for member ‘erase’ in ‘task_info’, which is of non-class type ‘int’
+       task_info.erase(key);
+                 ^~~~~
+subdir.mk:24: recipe for target 'TeamTasks.o' failed
+make: *** [TeamTasks.o] Error 1
+
+18:22:02 Build Finished (took 399ms)
+

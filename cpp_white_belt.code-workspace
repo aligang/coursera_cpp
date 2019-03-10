@@ -1,0 +1,240 @@
+{
+	"folders": [
+        {
+            "path": "000.vstest"
+        },
+        {
+            "path": "002.data_types"
+        },
+        {
+            "path": "003.operations_over_simple_types"
+        },
+        {
+            "path": "004.operations_over_containers"
+        },
+        {
+            "path": "005.input_and_output"
+        },
+        {
+            "path": "006.while_iteration"
+        },
+        {
+            "path": "007.home_work.a_plus_b"
+        },
+        {
+            "path": "001.hello_world"
+        },
+        {
+            "path": "042.min_max_sort"
+        },
+        {
+            "path": "043.sort_by_module"
+        },
+        {
+            "path": "044.sort.ignore_register"
+        },
+        {
+            "path": "008.assignment"
+        },
+        {
+            "path": "009.incrementors"
+        },
+        {
+            "path": "010.homework.minimal_string"
+        },
+        {
+            "path": "011.homework.expression"
+        },
+        {
+            "path": "012.do_while"
+        },
+        {
+            "path": "013.homework.division"
+        },
+        {
+            "path": "014.discount"
+        },
+        {
+            "path": "015.homework.numbers"
+        },
+        {
+            "path": "016.homework.second_f"
+        },
+        {
+            "path": "017.homework.biggest_common_devider"
+        },
+        {
+            "path": "018.homework.binary_numbers"
+        },
+        {
+            "path": "019.function"
+        },
+        {
+            "path": "020.homework.factorial"
+        },
+        {
+            "path": "021.homework.polindrom"
+        },
+        {
+            "path": "022.many_polyndromes"
+        },
+        {
+            "path": "023.links"
+        },
+        {
+            "path": "024.maximizer"
+        },
+        {
+            "path": "025.homework.move_strings"
+        },
+        {
+            "path": "026.homework.reverse"
+        },
+        {
+            "path": "027.homework.reverse_2"
+        },
+        {
+            "path": "028.vectors"
+        },
+        {
+            "path": "029.homework.average_temperature"
+        },
+        {
+            "path": "030.homework.queue"
+        },
+        {
+            "path": "031.homework.every_month_business"
+        },
+        {
+            "path": "032.events"
+        },
+        {
+            "path": "033.anagramms"
+        },
+        {
+            "path": "034.capitals"
+        },
+        {
+            "path": "035.bus_stops"
+        },
+        {
+            "path": "036.bus_stops_2"
+        },
+        {
+            "path": "037.sets"
+        },
+        {
+            "path": "038.amount_of_unique_strings"
+        },
+        {
+            "path": "039.set_of_dictionary_values"
+        },
+        {
+            "path": "040.synonims"
+        },
+        {
+            "path": "041.bus_stops_3"
+        },
+        {
+            "path": "045.variables_initialization"
+        },
+        {
+            "path": "046.classes"
+        },
+        {
+            "path": "047.sorted_strings"
+        },
+        {
+            "path": "048.names_and_surnames"
+        },
+        {
+            "path": "049.names_and_surnames.2"
+        },
+        {
+            "path": "050.strings"
+        },
+        {
+            "path": "051.names_and_surnames.3"
+        },
+        {
+            "path": "052.initialization_options"
+        },
+        {
+            "path": "053.date_structure"
+        },
+        {
+            "path": "054.lecture_title_structure"
+        },
+        {
+            "path": "055.reversible_functions"
+        },
+        {
+            "path": "056.reversible_fucntion_with_multiplication"
+        },
+        {
+            "path": "057.input_stream"
+        },
+        {
+            "path": "058.input_ouput"
+        },
+        {
+            "path": "059.output_formatting"
+        },
+        {
+            "path": "060.file_processing"
+        },
+        {
+            "path": "061.round_numbers"
+        },
+        {
+            "path": "062.tables"
+        },
+        {
+            "path": "063.students"
+        },
+        {
+            "path": "064.rational_interface"
+        },
+        {
+            "path": "065.introduction_to_exceptions"
+        },
+        {
+            "path": "066.ensure_equal"
+        },
+        {
+            "path": "067.timeserver"
+        },
+        {
+            "path": "068.datebase"
+        },
+        {
+            "path": "69.sum_reverse_sort"
+        }
+    ],
+	"settings": {
+		"files.associations": {
+			"*.tcc": "cpp",
+			"iostream": "cpp",
+			"cctype": "cpp",
+			"clocale": "cpp",
+			"cstdint": "cpp",
+			"cstdio": "cpp",
+			"cstdlib": "cpp",
+			"cwchar": "cpp",
+			"cwctype": "cpp",
+			"exception": "cpp",
+			"initializer_list": "cpp",
+			"iosfwd": "cpp",
+			"istream": "cpp",
+			"limits": "cpp",
+			"new": "cpp",
+			"ostream": "cpp",
+			"stdexcept": "cpp",
+			"streambuf": "cpp",
+			"system_error": "cpp",
+			"type_traits": "cpp",
+			"typeinfo": "cpp",
+			"tuple": "cpp"
+		}
+	}
+}

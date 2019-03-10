@@ -1,0 +1,90 @@
+01:17:43 **** Incremental Build of configuration Release for project 062.tables ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -O3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+../main.cpp:11:57: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ void collect_input(const string& path, vector<vector<int>>& table){
+                                                         ^
+../main.cpp: In function ‘void collect_input(const string&, std::vector<std::vector<int> >&)’:
+../main.cpp:13:21: error: no matching function for call to ‘std::basic_ifstream<char>::basic_ifstream(const string&)’
+  ifstream input(path);
+                     ^
+In file included from ../main.cpp:2:0:
+/usr/include/c++/5/fstream:495:7: note: candidate: std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const char*, std::ios_base::openmode) [with _CharT = char; _Traits = std::char_traits<char>; std::ios_base::openmode = std::_Ios_Openmode]
+       basic_ifstream(const char* __s, ios_base::openmode __mode = ios_base::in)
+       ^
+/usr/include/c++/5/fstream:495:7: note:   no known conversion for argument 1 from ‘const string {aka const std::__cxx11::basic_string<char>}’ to ‘const char*’
+/usr/include/c++/5/fstream:481:7: note: candidate: std::basic_ifstream<_CharT, _Traits>::basic_ifstream() [with _CharT = char; _Traits = std::char_traits<char>]
+       basic_ifstream() : __istream_type(), _M_filebuf()
+       ^
+/usr/include/c++/5/fstream:481:7: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/5/fstream:455:11: note: candidate: std::basic_ifstream<char>::basic_ifstream(const std::basic_ifstream<char>&)
+     class basic_ifstream : public basic_istream<_CharT, _Traits>
+           ^
+/usr/include/c++/5/fstream:455:11: note:   no known conversion for argument 1 from ‘const string {aka const std::__cxx11::basic_string<char>}’ to ‘const std::basic_ifstream<char>&’
+../main.cpp:21:8: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (auto i = 0; i < total_amount_of_table_strings; i++){
+        ^
+../main.cpp:21:13: error: ‘i’ does not name a type
+   for (auto i = 0; i < total_amount_of_table_strings; i++){
+             ^
+../main.cpp:21:20: error: expected ‘;’ before ‘i’
+   for (auto i = 0; i < total_amount_of_table_strings; i++){
+                    ^
+../main.cpp:21:20: error: ‘i’ was not declared in this scope
+../main.cpp:22:20: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+    table.push_back({});
+                    ^
+../main.cpp:22:22: warning: extended initializer lists only available with -std=c++11 or -std=gnu++11
+    table.push_back({});
+                      ^
+../main.cpp:23:9: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+    for (auto j = 0; j < total_amount_of_table_columns; j++){
+         ^
+../main.cpp:23:14: error: ‘j’ does not name a type
+    for (auto j = 0; j < total_amount_of_table_columns; j++){
+              ^
+../main.cpp:23:21: error: expected ‘;’ before ‘j’
+    for (auto j = 0; j < total_amount_of_table_columns; j++){
+                     ^
+../main.cpp:23:21: error: ‘j’ was not declared in this scope
+../main.cpp: At global scope:
+../main.cpp:35:44: error: ‘>>’ should be ‘> >’ within a nested template argument list
+ void display_output(const vector<vector<int>>& table){
+                                            ^
+../main.cpp: In function ‘void display_output(const std::vector<std::vector<int> >&)’:
+../main.cpp:38:14: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+   for (const auto& display_string:table){
+              ^
+../main.cpp:38:20: error: ISO C++ forbids declaration of ‘display_string’ with no type [-fpermissive]
+   for (const auto& display_string:table){
+                    ^
+../main.cpp:38:35: warning: range-based ‘for’ loops only available with -std=c++11 or -std=gnu++11
+   for (const auto& display_string:table){
+                                   ^
+../main.cpp:39:10: warning: ‘auto’ changes meaning in C++11; please remove it [-Wc++0x-compat]
+    for ( auto i = 0; i < display_string.size(); i++){
+          ^
+../main.cpp:39:15: error: ‘i’ does not name a type
+    for ( auto i = 0; i < display_string.size(); i++){
+               ^
+../main.cpp:39:22: error: expected ‘;’ before ‘i’
+    for ( auto i = 0; i < display_string.size(); i++){
+                      ^
+../main.cpp:39:22: error: ‘i’ was not declared in this scope
+../main.cpp:39:41: error: request for member ‘size’ in ‘display_string’, which is of non-class type ‘const int’
+    for ( auto i = 0; i < display_string.size(); i++){
+                                         ^
+../main.cpp:42:29: error: request for member ‘size’ in ‘display_string’, which is of non-class type ‘const int’
+     if (i < (display_string.size() - 1)){
+                             ^
+../main.cpp: In function ‘int main()’:
+../main.cpp:54:19: error: ‘>>’ should be ‘> >’ within a nested template argument list
+  vector<vector<int>> table;
+                   ^
+subdir.mk:18: recipe for target 'main.o' failed
+make: *** [main.o] Error 1
+
+01:17:44 Build Finished (took 586ms)
+

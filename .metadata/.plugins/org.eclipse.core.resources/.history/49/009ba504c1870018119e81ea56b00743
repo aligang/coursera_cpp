@@ -1,0 +1,190 @@
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <vector>
+#include <string>
+#include <set>
+#include <map>
+#include <sstream>
+#include <regex>
+
+using namespace std;
+
+// Реализуйте функции и методы классов и при необходимости добавьте свои
+
+
+class Date{
+public:
+	Date() = default;
+	Date(const int& input_year, const int& input_month, const int& input_day){
+		set_year(input_year);
+		set_month(input_month);
+		set_day(input_day);
+	}
+	int GetYear() const{
+		return year;
+	}
+	int GetMonth() const{
+		return month;
+	}
+	int GetDay() const{
+		return day;
+	}
+
+
+private:
+	void set_year(const int& input_year){
+		year = input_year;
+	}
+	void set_month(const int& input_month){
+		month = input_month;
+	}
+	void set_day(const int& input_day){
+		day = input_day;
+	}
+	int year;
+	int month;
+	int day;
+};
+
+
+bool operator<(const Date& lhs, const Date& rhs){
+	if (lhs.GetYear() < rhs.GetYear()){
+		return true;
+	} else if (lhs.GetYear() == rhs.GetYear()){
+		if (lhs.GetMonth() < rhs.GetMonth()){
+			return true;
+		} else if (lhs.GetMonth() == rhs.GetMonth()){
+			if (lhs.GetYear() < rhs.GetYear()){
+				return true;
+			}
+		}
+	}
+	return false;
+}
+
+void check_separation_symbol(char& separation_char){
+	if (separation_char != '-'){
+		throw system_error();
+	}
+}
+
+
+istream& operator>>(istream& input_stream, Date& date){
+	int year = 0;
+	int month = 0;
+	int day = 0;
+	string input_string;
+	input_stream >> input_string;
+	stringstream input_string_steam(input_string);
+	stringstream exception_variable_string;
+	regex date_format ("-?\\d+-{1,2}\\d+-{1,2}\\d+");
+	if (!regex_match(input_string, date_format)){
+		throw runtime_error("Wrong date format: " + input_string);
+	}
+	input_string_steam >> year;
+	input_string_steam.ignore(1);
+	input_string_steam >> month;
+	input_string_steam.ignore(1);
+	input_string_steam >> day;
+	if (month < 1 or month > 12){
+		exception_variable_string << month;
+		throw runtime_error("Month value is invalid: " + exception_variable_string.str());
+	}
+	if (day < 1 or day > 31){
+		exception_variable_string << day;
+		throw runtime_error("Day value is invalid: " + exception_variable_string.str());
+	}
+	date = Date(year, month, day);
+	return input_stream;
+}
+
+
+class Database {
+public:
+	void AddEvent(const Date& date, const string& event){
+		date_to_event_mapping[date].insert(event);
+	}
+	bool DeleteEvent(const Date& date, const string& event){
+		if (date_to_event_mapping[date].count(event) == 1){
+			date_to_event_mapping[date].erase(event);
+			cout << "Deleted successfully" << endl;
+		} else {
+			cout << "Event not found" << endl;
+		}
+
+		return false;
+	}
+	int  DeleteDate(const Date& date){
+		int amount_of_events = date_to_event_mapping[date].size();
+		date_to_event_mapping.erase(date);
+		cout << "Deleted " << amount_of_events << " events" << endl;
+		return 0;
+	}
+	void Find(const Date& date) const{
+		for (const auto& event:date_to_event_mapping.at(date)){
+			cout << event << endl;
+		}
+	}
+	void Print() const{
+		for (const auto& single_mapping:date_to_event_mapping){
+			const Date& date = single_mapping.first;
+			const set<string>& events = single_mapping.second;
+			for (auto& event:events){
+				cout << setfill('0') << setw(4) << date.GetYear() << "-" << setw(2) << date.GetMonth() << "-" << setw(2) << date.GetDay()
+					 << " " << event << endl;
+			}
+		}
+
+	}
+private:
+  map<Date,set<string>> date_to_event_mapping;
+};
+
+
+void perform_operation_over_db(Database& db, string& command, set<string>& allowed_operations){
+	Date date;
+	string operation;
+	string event;
+	stringstream input_string_stream(command);
+	if (!command.empty()) {
+		input_string_stream  >> operation;
+		try{
+			if (allowed_operations.count(operation) != 1){
+				throw runtime_error("Unknown command: " + operation + "\n");
+			}
+			if (operation != "Print"){
+				input_string_stream >> date;
+				if (operation == "Add"){
+					input_string_stream	>> event;
+					db.AddEvent(date,event);
+				} else if (operation == "Del" and input_string_stream.eof()) {
+					db.DeleteDate(date);
+				} else if (operation == "Del" and !input_string_stream.eof()) {
+					input_string_stream	>> event;
+					db.DeleteEvent(date,event);
+				} else if (operation == "Find") {
+					input_string_stream	>> event;
+					db.Find(date);
+				}
+			} else {
+				db.Print();
+			}
+		} catch (runtime_error& run){
+			cout << run.what() << endl;
+		}
+	}
+}
+
+
+int main() {
+	Database db;
+	string command;
+	set<string> allowed_operations = {"Add", "Del", "Find", "Print"};
+	while (getline(cin, command)) {
+		perform_operation_over_db(db, command,  allowed_operations);
+    // Считайте команды с потока ввода и обработайте каждую
+  }
+
+  return 0;
+}

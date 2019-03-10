@@ -1,0 +1,17 @@
+21:32:54 **** Incremental Build of configuration Debug for project 026.homework.reverse ****
+make all 
+Building file: ../Reverse.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"Reverse.d" -MT"Reverse.o" -o "Reverse.o" "../Reverse.cpp"
+../Reverse.cpp:1:14: error: variable or field ‘Reverse’ declared void
+ void Reverse(vector<int>& numbers){
+              ^
+../Reverse.cpp:1:14: error: ‘vector’ was not declared in this scope
+../Reverse.cpp:1:21: error: expected primary-expression before ‘int’
+ void Reverse(vector<int>& numbers){
+                     ^
+make: *** [Reverse.o] Error 1
+subdir.mk:21: recipe for target 'Reverse.o' failed
+
+21:32:54 Build Finished (took 265ms)
+

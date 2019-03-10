@@ -1,0 +1,24 @@
+02:01:45 **** Incremental Build of configuration Debug for project 020.homework.factorial ****
+make all 
+Building file: ../functions.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"functions.d" -MT"functions.o" -o "functions.o" "../functions.cpp"
+Finished building: ../functions.cpp
+ 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: 020.homework.factorial
+Invoking: GCC C++ Linker
+g++  -o "020.homework.factorial"  ./functions.o ./main.o   
+./main.o: In function `Factorial(int)':
+/var/lib/lxd/containers/CPP/rootfs/root/cpp/020.homework.factorial/Debug/../functions.cpp:1: multiple definition of `Factorial(int)'
+./functions.o:/var/lib/lxd/containers/CPP/rootfs/root/cpp/020.homework.factorial/Debug/../functions.cpp:1: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [020.homework.factorial] Error 1
+makefile:44: recipe for target '020.homework.factorial' failed
+
+02:01:46 Build Finished (took 1s.379ms)
+

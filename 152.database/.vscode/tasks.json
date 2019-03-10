@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "152.database",
+            "type": "shell",
+            "command": "/var/lib/lxd/containers/CPP/rootfs/usr/bin/x86_64-linux-gnu-g++-7",
+            "args": [
+                "-g",
+                "-std=c++17",
+                "main.cpp",
+                "date.cpp",
+                "database.cpp",
+                "token.cpp",
+                "node.cpp",
+                "condition_parser.cpp",
+                "-ooutput.o"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "problemMatcher": []
+        }
+    ]
+}

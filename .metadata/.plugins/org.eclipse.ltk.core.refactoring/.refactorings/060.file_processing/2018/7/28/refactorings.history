@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;060.file_processing/main.read_file.cpp&apos; to &apos;main.read_file&apos;" description="Rename resource &apos;main.read_file.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.read_file.cpp" name="main.read_file" stamp="1531310920435" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;060.file_processing/main.read_file&apos; to &apos;main.read_file.cpp&apos;" description="Rename resource &apos;main.read_file&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="main.read_file" name="main.read_file.cpp" stamp="1531311090929" updateReferences="true"/>
+</session>

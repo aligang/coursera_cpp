@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+#include <algorithm>
+
+
+using namespace std;
+
+
+void collect_cli_input(map<string,vector<string>>& cli_input){
+	int number_of_interations;
+	string input_string;
+	cin >> number_of_interations;
+	for  (auto i = 0; i < number_of_interations; i++){
+		cin >> input_string;
+		if (input_string == "NEW_BUS"){
+			cin >> cli_input[i]["current_country_name"];
+			cin >> cli_input[i]["new_country_name_or_capital_name"];
+		} else if (cli_input[i]["operation"] == "ABOUT"){
+			cin >> cli_input[i]["current_country_name"];
+		}
+	}
+}
+
+
+int main(){
+map<string,vector<string>> cli_input;
+map<string,vector<string>> bus_routes;
+
+	return 0;
+}

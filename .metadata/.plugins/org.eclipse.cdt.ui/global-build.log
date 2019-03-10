@@ -1,0 +1,15 @@
+14:52:00 **** Build of configuration Debug for project 69.sum_reverse_sort ****
+make all 
+Building file: ../sum_reverse_sort.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"sum_reverse_sort.d" -MT"sum_reverse_sort.o" -o "sum_reverse_sort.o" "../sum_reverse_sort.cpp"
+Finished building: ../sum_reverse_sort.cpp
+ 
+Building target: 69.sum_reverse_sort
+Invoking: GCC C++ Linker
+g++  -o "69.sum_reverse_sort"  ./sum_reverse_sort.o   
+/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+makefile:44: recipe for target '69.sum_reverse_sort' failed
+(.text+0x20): undefined reference to `main'
+collect2: error: ld returned 1 exit status
+make: *** [69.sum_reverse_sort] Error 1

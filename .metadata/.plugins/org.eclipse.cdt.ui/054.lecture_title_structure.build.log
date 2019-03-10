@@ -1,0 +1,71 @@
+22:41:53 **** Incremental Build of configuration Debug for project 054.lecture_title_structure ****
+make all 
+Building file: ../LectureTitle.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"LectureTitle.d" -MT"LectureTitle.o" -o "LectureTitle.o" "../LectureTitle.cpp"
+../LectureTitle.cpp:5:2: error: ‘string’ does not name a type
+  string value;
+  ^
+../LectureTitle.cpp:6:32: error: ‘string’ does not name a type
+  explicit Specialization(const string& specialization_name){
+                                ^
+../LectureTitle.cpp: In constructor ‘Specialization::Specialization(const int&)’:
+../LectureTitle.cpp:7:3: error: ‘value’ was not declared in this scope
+   value = specialization_name;
+   ^
+../LectureTitle.cpp: At global scope:
+../LectureTitle.cpp:13:2: error: ‘string’ does not name a type
+  string value;
+  ^
+../LectureTitle.cpp:14:24: error: ‘string’ does not name a type
+  explicit Course(const string& course_name){
+                        ^
+../LectureTitle.cpp: In constructor ‘Course::Course(const int&)’:
+../LectureTitle.cpp:15:3: error: ‘value’ was not declared in this scope
+   value = course_name;
+   ^
+../LectureTitle.cpp: At global scope:
+../LectureTitle.cpp:21:2: error: ‘string’ does not name a type
+  string value;
+  ^
+../LectureTitle.cpp:22:22: error: ‘string’ does not name a type
+  explicit Week(const string& course_duration){
+                      ^
+../LectureTitle.cpp: In constructor ‘Week::Week(const int&)’:
+../LectureTitle.cpp:23:3: error: ‘value’ was not declared in this scope
+   value = course_duration;
+   ^
+../LectureTitle.cpp: At global scope:
+../LectureTitle.cpp:29:2: error: ‘string’ does not name a type
+  string specialization;
+  ^
+../LectureTitle.cpp:30:2: error: ‘string’ does not name a type
+  string course;
+  ^
+../LectureTitle.cpp:31:2: error: ‘string’ does not name a type
+  string week;
+  ^
+../LectureTitle.cpp: In constructor ‘LectureTitle::LectureTitle(Specialization, Course, Week)’:
+../LectureTitle.cpp:33:3: error: ‘specialization’ was not declared in this scope
+   specialization = specialization_name.value;
+   ^
+../LectureTitle.cpp:33:40: error: ‘struct Specialization’ has no member named ‘value’
+   specialization = specialization_name.value;
+                                        ^
+../LectureTitle.cpp:34:3: error: ‘course’ was not declared in this scope
+   course = course_name.value;
+   ^
+../LectureTitle.cpp:34:24: error: ‘struct Course’ has no member named ‘value’
+   course = course_name.value;
+                        ^
+../LectureTitle.cpp:35:3: error: ‘week’ was not declared in this scope
+   week = week_name.value;
+   ^
+../LectureTitle.cpp:35:20: error: ‘struct Week’ has no member named ‘value’
+   week = week_name.value;
+                    ^
+make: *** [LectureTitle.o] Error 1
+subdir.mk:21: recipe for target 'LectureTitle.o' failed
+
+22:41:54 Build Finished (took 607ms)
+

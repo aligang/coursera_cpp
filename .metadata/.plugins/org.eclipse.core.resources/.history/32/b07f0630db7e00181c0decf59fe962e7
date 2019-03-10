@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <map>
+#include <algorithm>
+
+
+using namespace std;
+
+
+struct cli_input_element{
+	string operation;
+	string bus_name;
+	vector<string> stops;
+};
+
+
+void collect_cli_input(map<int,cli_input_element>& cli_input){
+	int number_input_records;
+	int number_of_bus_stops;
+	string input_command;
+	string bus_name;
+	string stop;
+	cin >> number_input_records;
+	for  (auto i = 0; i < number_input_records; i++){
+		cin >> cli_input[i].operation;
+		if (cli_input[i].operation == "NEW_BUS"){
+			cin >> cli_input[i].bus_name;
+			cin >> number_of_bus_stops;
+			for  (auto j = 0; j < number_of_bus_stops; j++){
+				cin >> stop;
+				cli_input[i].stops.push_back(stop);
+			}
+		} else if (cli_input[i].operation == "BUSES_FOR_STOP"){
+			cin >> stop;
+			cli_input[i].stops.push_back(stop);
+		} else if (cli_input[i].operation == "STOPS_FOR_BUS"){
+			cin >> cli_input[i].bus_name;
+		} else if (cli_input[i].operation == "BUSES"){
+			//ничо не делать
+		}
+	}
+}
+
+
+int main(){
+	map<int, cli_input_element> cli_input;
+	map<string,vector<string>> bus_routes;
+	collect_cli_input(cli_input);
+	return 0;
+}

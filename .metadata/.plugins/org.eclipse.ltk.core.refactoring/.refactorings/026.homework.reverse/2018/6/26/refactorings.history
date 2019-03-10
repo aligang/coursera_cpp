@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;026.homework.reverse/reverse.cpp&apos; to &apos;Reverse.cpp&apos;" description="Rename resource &apos;reverse.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="reverse.cpp" name="Reverse.cpp" stamp="1530382528467" updateReferences="true"/>
+</session>

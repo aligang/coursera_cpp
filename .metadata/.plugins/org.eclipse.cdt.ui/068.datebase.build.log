@@ -1,0 +1,15 @@
+19:43:20 **** Incremental Build of configuration Debug for project 068.datebase ****
+make all 
+Building file: ../main.cpp
+Invoking: GCC C++ Compiler
+g++ -std=c++0x -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"main.d" -MT"main.o" -o "main.o" "../main.cpp"
+Finished building: ../main.cpp
+ 
+Building target: 068.datebase
+Invoking: GCC C++ Linker
+g++  -o "068.datebase"  ./main.o   
+Finished building target: 068.datebase
+ 
+
+19:43:21 Build Finished (took 1s.599ms)
+
