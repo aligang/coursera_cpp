@@ -20,12 +20,12 @@ void Database::Add(const Date& date, const std::string& event){
         database_records_map[date] = std::vector<std::string>(0);
     };
     auto location_in_event_vector = std::find(
-        database_records_map[date].begin(), 
-        database_records_map[date].end(), 
+        database_records_map.at(date).begin(), 
+        database_records_map.at(date).end(), 
         event
     );
-    if (location_in_event_vector == database_records_map[date].end()){
-        database_records_map[date].push_back(event);
+    if (location_in_event_vector == database_records_map.at(date).end()){
+        database_records_map.at(date).push_back(event);
     };
     database_records_set.insert(
         make_pair(date, event)
